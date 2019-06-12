@@ -1,8 +1,6 @@
 
-¹Ø¼ü×Ö£º25¸ö
-°üµ¼ÈëÓëÉêÃ÷£ºimport¡¢package
-³ÌĞòÊµÌåÉêÃ÷Óë¶¨Òå£ºvar¡¢type¡¢func¡¢interface¡¢map¡¢struct¡¢chan¡¢const
-Á÷³Ì¿ØÖÆ£ºif¡¢else¡¢continue¡¢for¡¢return¡¢go¡¢case¡¢goto¡¢switch¡¢select¡¢break¡¢default¡¢defer¡¢fallthrough¡¢range
-
-
+å…³é”®å­—ï¼š25ä¸ª
+åŒ…å¯¼å…¥ä¸ç”³æ˜ï¼šimportã€package
+ç¨‹åºå®ä½“ç”³æ˜ä¸å®šä¹‰ï¼švarã€typeã€funcã€interfaceã€mapã€structã€chanã€const
+æµç¨‹æ§åˆ¶ï¼šifã€elseã€continueã€forã€returnã€goã€caseã€gotoã€switchã€selectã€breakã€defaultã€deferã€fallthroughã€range
 
