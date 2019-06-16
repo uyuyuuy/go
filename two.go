@@ -4,12 +4,11 @@ import (
 	"fmt"
 	"os"
 	"sync"
-	_ "sync"
 )
 
 type answer []string
 
-func main() {
+func main1() {
 	//var mutex sync.Mutex{}
 	//var answers answer
 
@@ -35,7 +34,7 @@ func main() {
 		//time.Sleep(1*time.Second)
 		//fmt.Print(question, "\n")
 		//wait_group.Add(1)
-		go do_question(k, question, &answers, &mutex, &wait_group)
+		go do_question1(k, question, &answers, &mutex, &wait_group)
 	}
 	wait_group.Wait()
 
@@ -45,7 +44,7 @@ func main() {
 
 }
 
-func do_question(k int, question string, mu *answer, mutex2 *sync.Mutex,wait_group *sync.WaitGroup) {
+func do_question1(k int, question string, mu *answer, mutex2 *sync.Mutex,wait_group *sync.WaitGroup) {
 	defer wait_group.Done()
 	mutex2.Lock()
 	//time.Sleep(1*time.Second)
@@ -53,6 +52,7 @@ func do_question(k int, question string, mu *answer, mutex2 *sync.Mutex,wait_gro
 	mutex2.Unlock()
 	//fmt.Print(*mu, "\n")
 }
+
 
 
 
