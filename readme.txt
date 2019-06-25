@@ -73,7 +73,20 @@ if exists {
 删除元素
 delete(dict, 'red')
 
+4.结构体 struct{}
+自定义类型，由一系列属性组成
+	type xiangdong struct {
+		name string
+		age  int
+	}
 
+	people1 := new(xiangdong)
+	people1.name = "xd"
+	people1.age = 29
+
+
+5.接口 interface{}
+定义了一组方法（方法集），但这些方法不包含实现
 
 流程控制
 if a := 1; a = 1 {
@@ -126,16 +139,10 @@ func name(int, int, string) (int, int) {
 	...
 }
 
-结构体 自定义类型，由一系列属性组成
-	type xiangdong struct {
-		name string
-		age  int
-	}
 
-	people1 := new(xiangdong)
-	people1.name = "xd"
-	people1.age = 29
+方法
+func (m mm) add(a int, b string)(c int, err error){
 
+}
 
-接口 定义了一组方法（方法集），但这些方法不包含实现
 */
