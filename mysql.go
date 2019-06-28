@@ -9,11 +9,29 @@ import (
 	"reflect"
 )
 
+const (
+	LevelDefault int = iota
+	LevelReadUncommitted
+	LevelReadCommitted
+	LevelWriteCommitted
+	LevelRepeatableRead
+	LevelSnapshot
+)
+
+
 const DATABASE_TYPE  = "mysql"
 const DNS  =  "dobi_tra:123###00@tcp(172.16.8.222:3306)/morecoin"
 
 
 func main() {
+
+	fmt.Println(LevelDefault)
+	fmt.Println(LevelReadUncommitted)
+	fmt.Println(LevelReadCommitted)
+	fmt.Println(LevelWriteCommitted)
+	fmt.Println(LevelRepeatableRead)
+	fmt.Println(LevelSnapshot)
+
 
 	var new_mysql mysql_tool
 	open, err := new_mysql.connection(DATABASE_TYPE, DNS)

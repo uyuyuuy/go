@@ -88,7 +88,29 @@ delete(dict, 'red')
 5.接口 interface{}
 定义了一组方法（方法集），但这些方法不包含实现
 
+
+[]byte
+
+=================================
+iota   从0开始递增
+const (
+	LevelDefault int = iota
+	LevelReadUncommitted
+	LevelReadCommitted
+	LevelWriteCommitted
+	LevelRepeatableRead
+	LevelSnapshot
+	LevelSerializable
+	LevelLinearizable
+)
+
+
+
+
+
+==========================================
 流程控制
+=========================================
 if a := 1; a = 1 {
 
 } else if 1 > 2 {
@@ -134,6 +156,8 @@ for  index, value := range a{
 	fmt.Println(value)
 }
 
+
+============================================================================
 函数
 func name(int, int, string) (int, int) {
 	...
