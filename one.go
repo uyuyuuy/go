@@ -1,4 +1,4 @@
-package main //包名，main表示当前是一个可执行程序，而不是一个库
+package github //包名，main表示当前是一个可执行程序，而不是一个库
 
 //import "fmt"
 

@@ -1,0 +1,9 @@
+[Common]
+InitDatabase = 0
+
+
+
+[Database]
+DriverName = "mysql"
+DataSourceName = "process01:123456@tcp(127.0.0.1:3306)/test?charset=utf8&parseTime=True&loc=Local"
+
