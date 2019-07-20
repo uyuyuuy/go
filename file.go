@@ -1,4 +1,4 @@
-package github
+package main
 
 import (
 	"github.com/sirupsen/logrus"
@@ -133,6 +133,63 @@ func main() {
 
 	os.Exit(0)
 
+
+
+	/*
+		type USER_LOG struct {
+			sync.RWMutex
+			log_dir string
+			log_filename string
+			timestamp time.Time
+			log_filepath string
+			log_file *os.File
+			logger *log.Logger
+		}
+
+		var user_log *USER_LOG
+
+		filePath, _ := filepath.Abs("./src/github/data_migration/log")
+
+		user_log = &USER_LOG{log_dir:filePath,log_filename:"user.txt"}
+
+		os.MkdirAll(filePath, os.ModePerm)
+
+		//创建文件
+		var err error
+		user_log.log_file, err = os.OpenFile(filePath+"/"+user_log.log_filename, os.O_RDWR|os.O_TRUNC|os.O_CREATE, os.ModePerm)
+		defer user_log.log_file.Close()
+		if err != nil {
+			panic(err)
+		}
+
+		//user_log.log_file.Write([]byte("ssss"))
+
+		uid := 1
+		user_log.Lock()
+		buf := make([]byte, 1024)
+
+		n,_ := user_log.log_file.Read(buf)
+		if n == 0 {
+			//uid, _ := strconv.Atoi(strings.Replace(string(buf),"\n","",1))
+			uids := strings.Replace(string(buf),"\n","",1)
+
+			//uid, err = strconv.Atoi(string(buf[:n]))
+			fmt.Println("read:", uids)
+		}
+		uid++
+		content := strconv.Itoa(uid)//string(uid)
+		m, err :=user_log.log_file.WriteString(content)
+
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println("m:", m)
+
+		user_log.Unlock()
+
+		fmt.Println("uid", uid)
+
+	*/
 
 }
 

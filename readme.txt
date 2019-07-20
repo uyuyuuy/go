@@ -163,6 +163,25 @@ func name(int, int, string) (int, int) {
 	...
 }
 
+func name(int0 int,strings ...string) (int, int) {
+    //strings 为切片
+	for _,name := range strings {
+	    fmt.Println(name)
+	}
+}
+
+name(1, "a", "b", "c")
+slice := []string{"a", "b", "c"}
+name(1, slice...)
+
+slice2 := []string{"d", "e", "f"}
+slice = append(slice, slice2...)
+
+func append(slice []Type, elems ...Type) []Type
+
+如果一个函数的某个参数是可变参数，可以传入切片类型数据，传入格式为slice...，后面需要加...
+
+
 
 方法
 func (m mm) add(a int, b string)(c int, err error){

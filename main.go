@@ -7,20 +7,16 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	myconfig "github/data_migration/config"
 	models_a "github/data_migration/models/a" //别名在签名
-	"log"
 	"os"
 	"path/filepath"
 	"reflect"
-	"strconv"
-	"sync"
-	"time"
 )
 
 var config myconfig.Config
 
 func init() {
 	//获取绝对路径
-	filePath, err := filepath.Abs("./src/github/data_migration/config/config.toml")
+	filePath, err := filepath.Abs("./data_migration/config/config.toml")
 	if err != nil {
 		panic(err)
 	}
@@ -172,62 +168,16 @@ func main() {
 
 
 func data_user (){
-	type USER_LOG struct {
-		sync.RWMutex
-		log_dir string
-		log_filename string
-		timestamp time.Time
-		log_filepath string
-		log_file *os.File
-		logger *log.Logger
-	}
-
-	var user_log *USER_LOG
 
 
-	filePath, _ := filepath.Abs("./src/github/data_migration/log")
+	os.Exit(0)
 
-	user_log = &USER_LOG{log_dir:filePath,log_filename:"user.txt"}
 
-	os.MkdirAll(filePath, os.ModePerm)
 
-	//创建文件
-	var err error
-	user_log.log_file, err = os.OpenFile(filePath+"/"+user_log.log_filename, os.O_RDWR|os.O_APPEND|os.O_CREATE, os.ModePerm)
-	if err != nil {
-		panic(err)
-	}
 
-	//user_log.log_file.Write([]byte("ssss"))
-
-	//for true {
-
-	uid := 0
-	user_log.Lock()
-	buf := make([]byte, 1024)
-
-	n,_ := user_log.log_file.Read(buf)
-	if n > 0 {
-		uid, err = strconv.Atoi(string(buf[:n]))
-		fmt.Println(uid, err)
-	}
-	uid++
-	m, err :=user_log.log_file.Write([]byte(string(uid)))
-
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(m)
-
-		user_log.Unlock()
-	//}
-
-	fmt.Println(uid)
 
 
 	os.Exit(110)
-
-
 
 
 }
@@ -242,6 +192,7 @@ func init_databases(db *gorm.DB) {
 	db.AutoMigrate(&models_a.Product{})
 	db.AutoMigrate(&models_a.User{})
 }
+
 
 func getType(v interface{}) string {
 	return fmt.Sprintf("%T", v)
