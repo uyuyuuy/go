@@ -1,7 +1,8 @@
 package main
 
 import (
-	"github.com/sirupsen/logrus"
+	"fmt"
+	"io/ioutil"
 	"os"
 )
 
@@ -12,6 +13,23 @@ type myfile struct {
 
 var testfile myfile
 func main() {
+
+	ioutil.WriteFile("test.text", []byte("测试快速写入功能!"), 0666)
+
+	file, _ := os.Open("1.log")
+	defer file.Close()
+	//file, _ := os.OpenFile("1.log", os.O_RDWR, 0666)
+	//file.Write([]byte("ssss"))
+	b, _ := ioutil.ReadAll(file)
+	//var b = make([]byte, 1024)
+	//file.Read(b)
+
+	fmt.Printf("Data read: %s\n", b)
+
+	fmt.Println(string(b))
+
+	os.Exit(0)
+
 /*
 	err := testfile.mkdir("testfile/ss", 0777)
 	if err != nil {
@@ -125,13 +143,6 @@ func main() {
 	}
 	*/
 
-
-	logrus.WithFields(logrus.Fields{
-		"message": "error message",
-	}).Info("First message")
-
-
-	os.Exit(0)
 
 
 

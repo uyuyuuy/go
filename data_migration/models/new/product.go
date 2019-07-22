@@ -1,4 +1,4 @@
-package a
+package new
 
 type Product struct {
 	ID int64

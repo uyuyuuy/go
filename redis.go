@@ -31,13 +31,13 @@ func main() {
 
 	//哈希类型  hash
 	/*
-		err = redis_clien.HSet("hset", "a","aaa").Err()
+		err = redis_clien.HSet("hset", "new","aaa").Err()
 		err = redis_clien.HSet("hset", "b","bbb").Err()
 		if err != nil {
 			panic(err)
 		}
 
-		h1, err := redis_clien.HGet("hset", "a").Result()	//字符串
+		h1, err := redis_clien.HGet("hset", "new").Result()	//字符串
 		h2, err := redis_clien.HGetAll("hset").Result()	//字典
 
 		fmt.Println(h1, h2)

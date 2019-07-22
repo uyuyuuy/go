@@ -2,8 +2,11 @@
 InitDatabase = 0
 
 
-
-[Database]
+[OldDobiDatabase]
 DriverName = "mysql"
-DataSourceName = "process01:123456@tcp(127.0.0.1:3306)/test?charset=utf8&parseTime=True&loc=Local"
+DataSourceName = "dobi_tra:123###00@tcp(172.16.8.222:3306)/morecoin?charset=utf8&parseTime=True&loc=Local"
 
+
+[NewDobiDatabase]
+DriverName = "mysql"
+DataSourceName = "process01:123456@tcp(127.0.0.1:3306)/dobi_core?charset=utf8&parseTime=True&loc=Local"

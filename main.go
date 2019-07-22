@@ -2,30 +2,38 @@ package main
 
 import (
 	"fmt"
-	"github.com/BurntSushi/toml"
+	//"github.com/BurntSushi/toml"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	myconfig "github/data_migration/config"
-	models_a "github/data_migration/models/a" //别名在签名
+	"github/data_migration"
+	"github/data_migration/config"
+
+	//myconfig "github/data_migration/config"
+	//"github/data_migration/models/old"
+
+	//"github/data_migration/models/old"
+
+	//models_a "github/data_migration/models/new" //别名在签名
+	//"github/data_migration/models/old"
 	"os"
-	"path/filepath"
+	//"path/filepath"
 	"reflect"
 )
 
-var config myconfig.Config
+//var config myconfig.Config
 
 func init() {
 	//获取绝对路径
-	filePath, err := filepath.Abs("./data_migration/config/config.toml")
-	if err != nil {
-		panic(err)
-	}
+	//filePath, err := filepath.Abs("./data_migration/config/config.toml")
+	//if err != nil {
+	//	panic(err)
+	//}
 	//fmt.Println(filePath)
 
 	//映射数据库连接配置
-	if _, err := toml.DecodeFile(filePath, &config); err != nil {
-		panic(err)
-	}
+	//if _, err := toml.DecodeFile(filePath, &config); err != nil {
+	//	panic(err)
+	//}
 
 	//打印
 	//fmt.Printf("%+v\n", config)		//可以用来打印结构体
@@ -42,7 +50,9 @@ func init() {
 
 func main() {
 
-	data_user()
+	data_migration.User_data()
+
+	//data_user()
 	os.Exit(111)
 
 	//连接数据库
@@ -189,8 +199,8 @@ func init_databases(db *gorm.DB) {
 	// 关闭复数表名，如果设置为true，`User`表的表名就会是`user`，而不是`users`
 	db.SingularTable(true)
 
-	db.AutoMigrate(&models_a.Product{})
-	db.AutoMigrate(&models_a.User{})
+	//db.AutoMigrate(&models_a.Product{})
+	//db.AutoMigrate(&old.User{})
 }
 
 

@@ -1,8 +1,9 @@
 package config
 
 type Config struct {
-	Common *Common
-	Database *Database
+	Common          *Common
+	OldDobiDatabase *Database
+	NewDobiDatabase *Database
 
 }
 

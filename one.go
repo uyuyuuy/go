@@ -99,7 +99,7 @@ func funcString() string {
 	}
 	fmt.Printf("%d", 120)
 
-	str := "a,b,c,d,e,f,g"
+	str := "new,b,c,d,e,f,g"
 	stringSlice := strings.Fields(str)	//只能用于区分空格 
 	fmt.Printf("%q", stringSlice)
 
