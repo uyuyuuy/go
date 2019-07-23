@@ -7,7 +7,8 @@ import (
 	myconfig "github/data_migration/config"
 	"path/filepath"
 
-	old_model "github/data_migration/models/old"
+	oldModel "github/data_migration/models/old"
+	newModel "github/data_migration/models/new"
 )
 
 var oldDb *gorm.DB
@@ -43,8 +44,8 @@ func init() {
 }
 
 func User_data() {
-	var address_model old_model.Address
-	oldDb.Select("address,uid,publicKey").Where(old_model.Address{
+	var address_model oldModel.Address
+	oldDb.Select("address,uid,publicKey").Where(oldModel.Address{
 		Address:"NVcHJEzm4pPnzndWM47nFPkHmociER54xs",
 	}).Limit(1).Find(&address_model)
 
