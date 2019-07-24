@@ -50,7 +50,7 @@ func init() {
 
 func main() {
 
-	data_migration.User_data()
+	data_migration.UserData()
 
 	//data_user()
 	os.Exit(111)
