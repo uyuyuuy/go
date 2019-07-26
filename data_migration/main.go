@@ -12,12 +12,38 @@ import (
 	"path/filepath"
 	"strconv"
 	"sync"
-	"time"
 )
 
 var oldDb *gorm.DB
 var newDb *gorm.DB
 var redisClien *redis.Client
+
+type UserScan struct {
+	UID uint64	`gorm:"column:uid"`
+	Email string	`gorm:"column:email"`
+	Password	string	`gorm:"column:pwd"`
+	TradePassword	string	`gorm:"column:pwdtrade"`
+	Prand	string	`gorm:"column:prand"`
+	Created	int64	`gorm:"column:created"`
+	CreateIP string	`gorm:"column:createip"`
+	Source	string	`gorm:"column:source"`
+	RegisterType	string		`gorm:"column:registertype"`
+	FromUID	int64		`gorm:"column:from_uid"`
+	Area	string	`gorm:"column:area"`
+	GoogleKey	string	`gorm:"column:google_key"`
+	Realname	string	`gorm:"column:realname"`
+	CardType	string	`gorm:"column:cardtype"`
+	IDCard	string	`gorm:"column:idcard"`
+	Status	string	`gorm:"column:status"`
+	FrontFace	string	`gorm:"column:frontFace"`
+	BackFace	string	`gorm:"column:backFace"`
+	Handkeep	string	`gorm:"column:handkeep"`
+	AutonymCreated	int64	`gorm:"column:autonym_created"`
+	AutonymUpdated	int64	`gorm:"column:autonym_updated"`
+	AdminID	int64	`gorm:"column:admin"`
+	Content	string	`gorm:"column:content"`
+	Country	string	`gorm:"column:country"`
+}
 
 func init() {
 
@@ -73,23 +99,22 @@ func UserData() {
 	var user_lock sync.Mutex
 	var user_lock_group sync.WaitGroup
 
-
 	for i := 0; i < 100; i ++ {
 		user_lock_group.Add(1)
 		go DoUserData(&user_lock, &user_lock_group, i)
-		time.Sleep(time.Duration(1))
+		//time.Sleep(100 * time.Millisecond)	//100毫秒，一秒十次
 	}
 
+	//阻塞，等待
 	user_lock_group.Wait()
 
 	os.Exit(110)
 
-
-
-
 }
 
-
+/**
+用户基本信息和实名认证信息同步
+ */
 func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup, i int) bool {
 	user_lock.Lock()
 	defer user_lock.Unlock()
@@ -97,44 +122,13 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup, i int) b
 
 	log.Print("NO", i)
 
-	type UserScan struct {
-		UID int64	`gorm:"column:uid"`
-		Email string	`gorm:"column:email"`
-		Password	string	`gorm:"column:pwd"`
-		TradePassword	string	`gorm:"column:pwdtrade"`
-		Prand	string	`gorm:"column:prand"`
-		Created	int64	`gorm:"column:created"`
-		CreateIP string	`gorm:"column:createip"`
-		Source	string	`gorm:"column:source"`
-		RegisterType	string		`gorm:"column:registertype"`
-		FromUID	int64		`gorm:"column:from_uid"`
-		Area	string	`gorm:"column:area"`
-		GoogleKey	string	`gorm:"column:google_key"`
-		Realname	string	`gorm:"column:realname"`
-		CardType	string	`gorm:"column:cardtype"`
-		IDCard	string	`gorm:"column:idcard"`
-		Status	string	`gorm:"column:status"`
-		FrontFace	string	`gorm:"column:frontFace"`
-		BackFace	string	`gorm:"column:backFace"`
-		Handkeep	string	`gorm:"column:handkeep"`
-		AutonymCreated	int64	`gorm:"column:autonym_created"`
-		AutonymUpdated	int64	`gorm:"column:autonym_updated"`
-		AdminID	int64	`gorm:"column:admin"`
-		Content	string	`gorm:"column:content"`
-		Country	string	`gorm:"column:country"`
-	}
-
-	//var LastUID int64
-
-	//字符串类型  string
-
-	var LastUID int
+	var LastUID uint64	//无符号数字
 	var uid string
 	uid, err := redisClien.Get("LastUID").Result()
 	if err != nil {
 		panic(err)
 	}
-	LastUID, err = strconv.Atoi(uid)
+	LastUID, err = strconv.ParseUint(uid, 10,64)
 
 	var userScan UserScan
 	var selectStr string
@@ -142,7 +136,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup, i int) b
 		"user.created,user.createip,user.source,user.registertype,user.from_uid,user.area,user.google_key," +
 		"autonym.name realname,autonym.cardtype,autonym.idcard,autonym.status,autonym.frontFace,autonym.backFace,autonym.handkeep," +
 		"autonym.created autonym_created,autonym.updated autonym_updated,autonym.admin,autonym.content,autonym.country"
-	oldDb.Table("user").Select(selectStr).Joins("inner join autonym on autonym.uid = user.uid").Where("user.uid > ?", LastUID).Order("user.uid asc").Limit(1).Scan(&userScan)
+	oldDb.Table("user").Select(selectStr).Joins("left join autonym on autonym.uid = user.uid").Where("user.uid > ?", LastUID).Order("user.uid asc").Limit(1).Scan(&userScan)
 
 	if userScan.UID == 0 {
 		panic("No data")
@@ -150,8 +144,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup, i int) b
 	}
 	fmt.Println(userScan)
 
-	LastUID++
-	err = redisClien.Set("LastUID", LastUID, 0).Err()
+	err = redisClien.Set("LastUID", userScan.UID, 0).Err()
 	if err != nil {
 		panic(err)
 	}
@@ -160,9 +153,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup, i int) b
 
 
 	//os.Exit(0)
-	//
-	//
-	//
+
 	//var userModel newModel.UserMain
 	//userModel.AccountName = "test02"
 	//userModel.Password = "sssdds"

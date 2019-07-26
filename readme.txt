@@ -4,13 +4,28 @@
 程序实体申明与定义：var、type、func、interface、map、struct、chan、const
 流程控制：if、else、continue、for、return、go、case、goto、switch、select、break、default、defer、fallthrough、range
 
+变量命名规则：驼峰命名，避免使用下划线
+
 /*
 基础数据类型
 1.整型int/uint
-默认int类型
+默认int类型（根据操作系统确定，32位操作系统就是int32,64位就是int64）
 有符号整型：int8,int16,int32(rune),int64
 无符号整型：uint8(byte),uint16,uint32,uint64
-uintptr
+uintptr 一个大到足以存储指针值的未解释位的无符号整数
+
+byte        alias for uint8 （别名）
+rune        alias for int32 （别名）
+
+uint8所有无符号8位整数的集合（0到255）
+uint16所有无符号16位整数的集合（0到65535）
+uint32所有无符号32位整数的集合（0到4294967295）
+uint64所有无符号64位整数的集合（0到18446744073709551615）
+
+int8所有带符号的8位整数集（-128到127）
+int16所有带符号的16位整数集（-32768到32767）
+int32所有带符号的32位整数的集合（-2147483648到2147483647）
+int64所有带符号的64位整数的集合（-9223372036854775808到9223372036854775807）
 
 
 2.浮点型
@@ -44,7 +59,7 @@ slice := make([]int,3,5) //长度为3，容量为5
 
 slice := []int{1,2,3,4}
 空切片 var slice []int
-切片的访问和赋值跟数组一样
+切片的访问和修改值跟数组一样，但是增加元素必须用append，不能slice[] = 1或者 slice[10] = 10，否则报错 panic: runtime error: index out of range
 
 创建一个新切片
 slice := []int{1,2,3,4,5,6,7,8,9}
@@ -110,6 +125,7 @@ const (
 
 ==========================================
 流程控制
+GO没有while do相关函数
 =========================================
 if a := 1; a = 1 {
 

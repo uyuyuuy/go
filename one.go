@@ -4,6 +4,7 @@ package main //包名，main表示当前是一个可执行程序，而不是一�
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 	"strings"
 )
@@ -32,6 +33,25 @@ func init() {
 
 //程序主函数
 func main() {
+
+	//切片的操作
+	var SliceInt []int
+
+	//增加元素必须用append，不能使用slice[] = 1或者 slice[10] = 10，否则报错 panic: runtime error: index out of range
+	SliceInt = append(SliceInt,0)
+	SliceInt = append(SliceInt,1)
+	SliceInt = append(SliceInt,2)
+	SliceInt = append(SliceInt,3)
+
+	fmt.Println(SliceInt[0])
+	SliceInt[3] = 10
+
+	fmt.Println(SliceInt[1])
+	fmt.Println(SliceInt[2])
+	fmt.Println(SliceInt[3])
+
+	os.Exit(0)
+
 	//局部变量定义了必须使用
 	inta = 1
 
