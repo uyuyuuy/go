@@ -1,0 +1,211 @@
+{"level":"warning","msg":"panic","time":"2019-07-31T10:30:50+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:52+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:52+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:53+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:53+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:54+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:54+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:55+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:55+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:56+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:56+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:57+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:57+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:58+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:58+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:59+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:42:59+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:43:00+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:43:00+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:43:01+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T10:43:01+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:45+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:45+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:46+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:46+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:47+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:47+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:48+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:48+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:49+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:49+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:50+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:50+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:51+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:51+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:52+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:52+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:53+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:53+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:54+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:43:54+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T10:47:58+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T10:47:58+08:00"}
+{"level":"warning","msg":"同步失败：13231210","time":"2019-07-31T10:47:58+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:48:59+08:00"}
+{"level":"info","msg":"开始同步：13231211","time":"2019-07-31T11:48:59+08:00"}
+{"level":"warning","msg":"同步失败：13231211","time":"2019-07-31T11:48:59+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:51:59+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:51:59+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:00+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:00+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:01+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:01+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:02+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:02+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:03+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:03+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:04+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:04+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:05+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:05+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:06+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:06+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:07+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:07+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T11:52:08+08:00"}
+{"level":"warning","msg":"13231212无地址数据","time":"2019-07-31T11:52:08+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T11:52:34+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T11:52:34+08:00"}
+{"level":"warning","msg":"同步失败：13231210","time":"2019-07-31T11:52:34+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T11:54:14+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T11:54:14+08:00"}
+{"level":"warning","msg":"同步失败：13231210","time":"2019-07-31T11:54:14+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T11:56:13+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T11:56:13+08:00"}
+{"level":"info","msg":"valueStrings：[     (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T11:56:13+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings, )：,,,,,(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T11:56:13+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES ,,,,,(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T11:56:13+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T11:57:22+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T11:57:22+08:00"}
+{"level":"info","msg":"valueStrings：[     (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T11:57:22+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings,,)：,,,,,(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T11:57:22+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES ,,,,,(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T11:57:22+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T11:58:53+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T11:58:53+08:00"}
+{"level":"info","msg":"valueStrings：[(?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T11:58:53+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings,,)：(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T11:58:53+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES (?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T11:58:53+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:03+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:03+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:03+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:03+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:04+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:04+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:05+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:05+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:06+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:06+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:07+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:07+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:09+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:09+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:10+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:10+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:10+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:10+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:33:11+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:33:11+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T12:33:20+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T12:33:20+08:00"}
+{"level":"info","msg":"valueStrings：[(?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T12:33:20+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings,,)：(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:33:20+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES (?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:33:20+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T12:34:00+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T12:34:00+08:00"}
+{"level":"info","msg":"valueStrings：[(?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T12:34:00+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings,,)：(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:34:00+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES (?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:34:00+08:00"}
+{"level":"warning","msg":"同步失败：13231210","time":"2019-07-31T12:34:00+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T12:35:47+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T12:35:47+08:00"}
+{"level":"info","msg":"valueStrings：[(?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T12:35:47+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings,,)：(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:35:47+08:00"}
+{"level":"info","msg":"valueArgs：[13231210 0 1 0  13231210 1 123 0  13231210 2 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB 1558684786  13231210 3 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 1558676986  13231210 4 WCG-VYQX-VRPR-62YE-94YML 1564125521 ]","time":"2019-07-31T12:35:47+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES (?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:35:47+08:00"}
+{"level":"warning","msg":"同步失败：13231210","time":"2019-07-31T12:35:47+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:36:54+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:36:54+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:36:55+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:36:55+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:36:56+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:36:56+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:36:57+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:36:57+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:36:58+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:36:58+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:36:59+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:36:59+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:00+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:00+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:01+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:01+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:02+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:02+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:03+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:03+08:00"}
+{"level":"warning","msg":"[{1231300 13231210 1 abbc 0 0 0   } {1231301 13231210 123 eth 0 0 0   } {1231249 13231210 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB ilc 0 1558684786 0   } {1231245 13231210 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 metacoin 0 1558676986 0   } {1231346 13231210 WCG-VYQX-VRPR-62YE-94YML wen 0 1564125521 0  b99e135f16528c5c21711de52ce073629ff9fae4d77ae8ca01e19a623c2b9262 }]","time":"2019-07-31T12:37:13+08:00"}
+{"level":"info","msg":"开始同步：13231210","time":"2019-07-31T12:37:13+08:00"}
+{"level":"info","msg":"valueStrings：[(?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?) (?,?,?,?,?)]","time":"2019-07-31T12:37:13+08:00"}
+{"level":"info","msg":"strings.Join(valueStrings,,)：(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:37:13+08:00"}
+{"level":"info","msg":"valueArgs：[13231210 0 1 0  13231210 1 123 0  13231210 2 17CutjcGrrLDfQiNPJ1w19bvgsusdeSBCB 1558684786  13231210 3 MTSo0YMShfqKBNf2t5WMx3UBB9kDhSgT8c7a5a20 1558676986  13231210 4 WCG-VYQX-VRPR-62YE-94YML 1564125521 ]","time":"2019-07-31T12:37:13+08:00"}
+{"level":"info","msg":"sqlStr：INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES (?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?)","time":"2019-07-31T12:37:13+08:00"}
+{"level":"info","msg":"同步成功：13231210","time":"2019-07-31T12:37:13+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:14+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:14+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:15+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:15+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:16+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:16+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:17+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:17+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:18+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:18+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:19+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:19+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:20+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:20+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:21+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:21+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T12:37:22+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T12:37:22+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:43+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:43+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:44+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:44+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:45+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:45+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:46+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:46+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:47+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:47+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:48+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:48+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:49+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:49+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:50+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:50+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:51+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:51+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:11:52+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:11:52+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:44+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:44+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:45+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:45+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:46+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:46+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:47+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:47+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:48+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:48+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:49+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:49+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:50+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:50+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:51+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:51+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:52+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:52+08:00"}
+{"level":"warning","msg":"[]","time":"2019-07-31T15:15:53+08:00"}
+{"level":"warning","msg":"13231211无地址数据","time":"2019-07-31T15:15:53+08:00"}

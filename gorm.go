@@ -105,6 +105,10 @@ func init_databases(db *gorm.DB) {
 	//fmt.Println(product) // find product with id 1
 
 
+	//var address_model oldModel.Address
+	//oldDb.Select("address,uid,publicKey").Where(oldModel.Address{
+	//	Address:"NVcHJEzm4pPnzndWM47nFPkHmociER54xs",
+	//}).Limit(1).Find(&address_model)
 
 
 

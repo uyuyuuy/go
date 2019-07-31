@@ -3,7 +3,7 @@ package config
 type Config struct {
 	Common          *CommonConfig
 	OldDobiDatabase *MysqlConfig
-	NewDobiDatabase *MysqlConfig
+	NewDobiDatabase *NewDobiDatabaseConfig
 	RedisDatabase	*RedisConfig
 
 }
@@ -21,6 +21,11 @@ type MysqlConfig struct {
 type RedisConfig struct {
 	Addr	string
 	Password	string
+}
+
+type NewDobiDatabaseConfig struct {
+	Core	MysqlConfig
+	Trade	MysqlConfig
 }
 
 

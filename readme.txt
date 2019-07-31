@@ -60,6 +60,7 @@ slice := make([]int,3,5) //长度为3，容量为5
 slice := []int{1,2,3,4}
 空切片 var slice []int
 切片的访问和修改值跟数组一样，但是增加元素必须用append，不能slice[] = 1或者 slice[10] = 10，否则报错 panic: runtime error: index out of range
+slice := make([]int, 10)    //将切片变成数组，定义了切片的数量
 
 创建一个新切片
 slice := []int{1,2,3,4,5,6,7,8,9}
@@ -75,11 +76,12 @@ slice := [][]int{{10},{20,30}}
 len() 返回切片的长度
 cap() 返回切片的容量
 
-3.映射
+3.字典（映射）
 用于存储一系列无序的键值对，映射基于键来存储值
 dict := make(map[string]int){"red":1,"blue":2}
 dict := map[string]int{}
 dict := map[string][]int{}
+dict2 := map[string]interface{}{}
 value, exists := dict['red']
 if exists {
 	fmt.Println(value)
@@ -120,8 +122,11 @@ const (
 )
 
 
-简单的说，new只分配内存，make用于slice，map，和channel的初始化
+简单的说，new只分配内存并返回类型的指针，make用于slice，map，和chan的初始化，返回的是传入的类型
 数据类型（结构体）不能用range
+
+make、new、cap
+
 
 ==========================================
 流程控制

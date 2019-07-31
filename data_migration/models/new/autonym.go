@@ -1,7 +1,7 @@
 package new
 
 type Autonym struct {
-	UserID int64	`gorm:"column:F01"`
+	UserID uint64	`gorm:"column:F01"`
 	Front  string	`gorm:"column:F02"`
 	Reverse string	`gorm:"column:F03"`
 	HandFront string	`gorm:"column:F04"`

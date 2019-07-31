@@ -2,7 +2,7 @@ package old
 
 type Address struct {
 	ID int64
-	Uid int64
+	UID uint64
 	Address string
 	Coin string
 	Status int8

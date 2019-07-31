@@ -1,11 +1,13 @@
 package new
 
+import "database/sql"
+
 type UserMain struct {
-	ID int64	`gorm:"column:F01"`
-	AccountName	string	`gorm:"column:F02"`
+	UID uint64	`gorm:"column:F01"`
+	AccountName	sql.NullString	`gorm:"column:F02"`
 	Password	string	`gorm:"column:F03"`
-	Mobile	string	`gorm:"column:F04"`
-	Email	string	`gorm:"column:F05"`
+	Mobile	sql.NullString	`gorm:"column:F04"`
+	Email	sql.NullString	`gorm:"column:F05"`
 	IsLock	string	`gorm:"column:F06"`
 	RegisterFrom	string	`gorm:"column:F07"`
 	LockRemark	string	`gorm:"column:F08"`

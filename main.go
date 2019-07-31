@@ -56,7 +56,7 @@ func main() {
 	os.Exit(111)
 
 	//连接数据库
-	db, err := gorm.Open(config.Database.DriverName, config.Database.DataSourceName)
+	db, err := gorm.Open(config.MysqlConfig{}.DriverName, config.MysqlConfig.DataSourceName)
 	defer db.Close()
 	if err != nil {
 		panic("failed to connect database")

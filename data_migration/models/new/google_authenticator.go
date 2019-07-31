@@ -1,7 +1,7 @@
 package new
 
 type GoogleAuthenticator struct {
-	UserID int64	`gorm:"column:F01"`
+	UserID uint64	`gorm:"column:F01;primary_key"`
 	SecretKey  string	`gorm:"column:F02"`
 	Url string	`gorm:"column:F03"`
 }
