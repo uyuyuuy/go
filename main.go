@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	main2 "github/data_migration"
 	//"github.com/BurntSushi/toml"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"github/data_migration"
 	"github/data_migration/config"
 
 	//myconfig "github/data_migration/config"
@@ -50,7 +50,7 @@ func init() {
 
 func main() {
 
-	data_migration.UserData()
+	main2.UserData()
 
 	//data_user()
 	os.Exit(111)

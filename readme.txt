@@ -210,3 +210,12 @@ func (m mm) add(a int, b string)(c int, err error){
 }
 
 */
+
+
+包
+package main 包中的main函数，是项目入口文件，相当于index.php文件（main函数只能出现在package main 中）
+go run main.go
+
+引入包，该包根目录所有go文件中的init函数会依次触发，按照文件名排序依次执行(如果根目录下引入了其他包，则会去到引入的包根目录下执行所有go文件中的init函数，一直这样递归执行)
+
+

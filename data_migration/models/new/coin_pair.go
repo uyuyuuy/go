@@ -2,7 +2,7 @@ package new
 
 type CoinPair struct {
 	ID int64 `gorm:"column:F01"`
-	MarketID uint64 `gorm:"column:F02"`
+	MarketID int `gorm:"column:F02"`
 	BuyCoinID int `gorm:"column:F03"`
 	SaleCoinID int `gorm:"column:F04"`
 	PricePrecision	int	`gorm:"column:F05"`	//交易市场-交易金额显示精确度（小数位数）

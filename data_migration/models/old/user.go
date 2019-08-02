@@ -27,4 +27,5 @@ type UserScan struct {
 	AdminID	int64	`gorm:"column:admin"`
 	Content	string	`gorm:"column:content"`
 	Country	string	`gorm:"column:country"`
+
 }

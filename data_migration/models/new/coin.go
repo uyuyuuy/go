@@ -2,7 +2,7 @@ package new
 
 type Coin struct {
 	ID int64 `gorm:"column:F01"`
-	Name uint64 `gorm:"column:F02"`
+	Name string `gorm:"column:F02"`
 	AssetName string `gorm:"column:F03"`
 	Logo string `gorm:"column:F04"`
 	InStatus string	`gorm:"column:F05"`
@@ -15,7 +15,7 @@ type Coin struct {
 	MaxOutFee	float64	`gorm:"column:F12"`	//最大提币手续费数量
 	OutRate	float64	`gorm:"column:F13"`	//提币费率
 	ContractUrl	string	`gorm:"column:F14"`	//合约地址
-	Series	string	`gorm:"column:F15"`		//系列
+	Series	string	`gorm:"column:F15;DEFAULT:NULL"`		//系列
 	Description	string	`gorm:"column:F16"`
 	OutLimit	float64	`gorm:"column:F17"`
 	IsDelete	string	`gorm:"column:F18"`
@@ -23,8 +23,8 @@ type Coin struct {
 	OutFloatNumberLimit	int		`gorm:"column:F20"`	//提币小数位控制
 	IsFreeFee	string	`gorm:"column:F21"`	//是否免手续费：S-是；F-否
 	ChormUrl	string	`gorm:"column:F22"`	//区块链浏览器URL
-	IsHaveMemo	string	`gorm:"column:F23"`	//充币memo：S-是；F-否
-	MinIn	float64	`gorm:"column:F18"`	//充币最小数量
+	IsHaveMemo	string	`gorm:"column:F23;DEFAULT:F"`	//充币memo：S-是；F-否
+	MinIn	float64	`gorm:"column:F24"`	//充币最小数量
 
 }
 

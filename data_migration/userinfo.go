@@ -1,15 +1,18 @@
 package data_migration
 
 import (
+	"fmt"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+	"github/data_migration/mycore"
+	"strings"
+
 	newModel "github/data_migration/models/new"
 	oldModel "github/data_migration/models/old"
 	"log"
 	"os"
 
-	//"path/filepath"
 	"reflect"
 	"strconv"
 	"sync"
@@ -18,7 +21,7 @@ import (
 
 
 func init() {
-
+	log.Print("userinfo init")
 }
 
 
@@ -54,7 +57,7 @@ func UserData() (err error) {
 
 	for i := 0; i < 10; i ++ {
 		user_lock_group.Add(1)
-		go DoUserData(&user_lock, &user_lock_group)
+		go doUserData(&user_lock, &user_lock_group)
 		time.Sleep(1000 * time.Millisecond)	//100毫秒，一秒十次
 	}
 
@@ -68,7 +71,7 @@ func UserData() (err error) {
 /**
 用户基本信息和实名认证信息同步
  */
-func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
+func doUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	user_lock.Lock()
 	defer user_lock.Unlock()
 	defer user_lock_group.Done()
@@ -93,7 +96,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	if userScan.UID == 0 {
 		panic("No data")
 	} else {
-		Logrus.Warn("开始同步：", userScan.UID)
+		Logrus.Info("开始同步：", userScan.UID)
 	}
 
 	defer func() {
@@ -121,7 +124,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 				userMain.AccountName.String = userScan.Mobile
 				userMain.AccountName.Valid = true
 			} else {
-				log.Fatal(strconv.FormatUint(userScan.UID,10) + "无手机号码和邮箱")
+				Logrus.Warn(strconv.FormatUint(userScan.UID,10) + "无手机号码和邮箱")
 			}
 		case 1:
 			userMain.AccountName.String = userScan.Email
@@ -130,7 +133,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 			userMain.AccountName.String = userScan.Mobile
 			userMain.AccountName.Valid = true
 		default:
-			log.Fatal(strconv.FormatUint(userScan.UID,10) + " RegisterType is wrong ")
+			Logrus.Warn(strconv.FormatUint(userScan.UID,10) + " RegisterType is wrong ")
 	}
 
 	userMain.Password = userScan.Password
@@ -188,15 +191,91 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 		}
 	}
 
-
 	//执行数据同步
 	tx := newDbCore.Begin()
-	dberr := make([]error, 4)
+	dberr := make([]error, 6)
 
 	dberr[0] = tx.Create(&userMain).Error
-	dberr[1] = tx.Model(&googelAuthenticator).Update(newModel.GoogleAuthenticator{SecretKey:userScan.GoogleKey}).Error
+	if userScan.GoogleKey != "" {
+		dberr[1] = tx.Model(&googelAuthenticator).Update(newModel.GoogleAuthenticator{SecretKey:userScan.GoogleKey}).Error
+	}
 	dberr[2] = tx.Create(&userAutonym).Error
 	dberr[3] = tx.Create(&userInfo).Error
+
+
+	//用户地址
+	var userAddress []oldModel.Address
+	oldDb.Where(oldModel.Address{UID:userScan.UID}).Find(&userAddress)
+	Logrus.Warn(userAddress)
+
+	if len(userAddress) > 0 {
+		addressCount := len(userAddress)
+		valueStrings := make([]string, addressCount)
+		valueArgs := make([]interface{}, 5 * addressCount)
+
+		for i := 0; i < addressCount; i++ {
+			valueStrings = append(valueStrings, "(?,?,?,?,?)")
+			valueArgs = append(valueArgs, userAddress[i].UID)
+			valueArgs = append(valueArgs, userAddress[i].Coin)	//币种ID
+			//valueArgs = append(valueArgs, i)
+			valueArgs = append(valueArgs, userAddress[i].Address)
+			valueArgs = append(valueArgs, userAddress[i].Created)
+			valueArgs = append(valueArgs, userAddress[i].Label)
+		}
+
+		sqlStr := fmt.Sprintf("INSERT INTO t6012_1(F02,F03,F04,F05,F08) VALUES %s", strings.Join(valueStrings, ","))
+		Logrus.Info("valueStrings：", valueStrings)
+		Logrus.Info("strings.Join(valueStrings,,)：", strings.Join(valueStrings, ","))
+		Logrus.Info("valueArgs：", valueArgs)
+		Logrus.Info("sqlStr：", sqlStr)
+
+		dberr[4] = tx.Exec(sqlStr,valueArgs...).Error
+
+	} else {
+		Logrus.Warn(userScan.UID, "无地址数据")
+	}
+
+	//用户资产
+	var userAsset oldModel.Asset
+	oldDb.Where(oldModel.Asset{UID:userScan.UID}).Find(&userAsset)
+
+	assetMap := mycore.Struct2Map(userAsset)
+	fmt.Println(assetMap)
+
+	var newCoin []newModel.Coin
+	newDbCore.Find(&newCoin)
+	//fmt.Println(newCoin)
+	//fmt.Println(len(newCoin))
+
+	assetCount := len(newCoin)
+	valueStrings := make([]string, 0, assetCount)
+	valueArgs := make([]interface{}, 0, 4 * assetCount)
+
+	for _, coin := range newCoin {
+		coinName := coin.Name
+		coinID := coin.ID
+		valueStrings = append(valueStrings, "(?,?,?,?)")
+		valueArgs = append(valueArgs, userScan.UID)
+		valueArgs = append(valueArgs, coinID)	//币种ID
+		if v, ok := assetMap[strings.ToUpper(coinName)+"OVER"]; ok {
+			valueArgs = append(valueArgs, v)
+		} else {
+			valueArgs = append(valueArgs, 0)
+		}
+		if v, ok := assetMap[strings.ToUpper(coinName)+"LOCK"]; ok {
+			valueArgs = append(valueArgs, v)
+		} else {
+			valueArgs = append(valueArgs, 0)
+		}
+	}
+	sqlStr := fmt.Sprintf("INSERT INTO t6025(F02,F03,F04,F05) VALUES %s", strings.Join(valueStrings, ","))
+	Logrus.Info("valueStrings：", valueStrings)
+	Logrus.Info("strings.Join(valueStrings,,)：", strings.Join(valueStrings, ","))
+	Logrus.Info("valueArgs：", valueArgs)
+	Logrus.Info("sqlStr：", sqlStr)
+	dberr[5] = tx.Exec(sqlStr,valueArgs...).Error
+
+	//os.Exit(0)
 
 	isHaveError := false
 	for _, e := range dberr {
@@ -206,6 +285,7 @@ func DoUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 			break
 		}
 	}
+
 
 	if isHaveError {
 		tx.Rollback()

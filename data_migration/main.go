@@ -7,6 +7,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/sirupsen/logrus"
 	myconfig "github/data_migration/config"
+	"log"
 	"path/filepath"
 )
 
@@ -18,6 +19,7 @@ var Logrus *logrus.Logger
 
 
 func init() {
+	log.Print("main init")
 
 	var config myconfig.Config
 
@@ -52,7 +54,7 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	newDbCore.LogMode(true)
+	newDbTrade.LogMode(true)
 
 	redisConfig := config.RedisDatabase
 	var redis_options = &redis.Options{
@@ -62,6 +64,7 @@ func init() {
 	redisClien = redis.NewClient(redis_options)
 
 }
+
 
 
 

@@ -5,25 +5,28 @@ import (
 	"fmt"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/sirupsen/logrus"
+	//"github/data_migration"
+	"log"
 	"os"
 	"reflect"
 	"strings"
 
 	oldModel "github/data_migration/models/old"
-
 	"strconv"
 	"sync"
 	"time"
 )
 
+//该文件程序已移植到userinfo.go文件中
+
 
 func init() {
-
+	log.Print("address init")
 
 }
 
 
-func UserAddress() (err error) {
+func userAddress() (err error) {
 	defer func() {
 		if p := recover();p != nil{
 			//异常日志
@@ -53,7 +56,7 @@ func UserAddress() (err error) {
 
 	for i := 0; i < 10; i ++ {
 		user_lock_group.Add(1)
-		go DoUserAddress(&user_lock, &user_lock_group)
+		go doUserAddress(&user_lock, &user_lock_group)
 		time.Sleep(1000 * time.Millisecond)	//100毫秒，一秒十次
 	}
 
@@ -67,7 +70,7 @@ func UserAddress() (err error) {
 /**
 用户基本信息和实名认证信息同步
 */
-func DoUserAddress(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
+func doUserAddress(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	user_lock.Lock()
 	defer user_lock.Unlock()
 	defer user_lock_group.Done()
@@ -95,6 +98,7 @@ func DoUserAddress(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	oldDb.Table("user").Select("uid").Where("user.uid > ? ", LastUID).Order("uid asc").Limit(1).Scan(&userInfo)
 
 	if userInfo.Uid > 0 {
+
 		var userAddress []oldModel.Address
 		oldDb.Where(oldModel.Address{UID:userInfo.Uid}).Find(&userAddress)
 		Logrus.Warn(userAddress)
