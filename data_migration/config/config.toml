@@ -19,3 +19,4 @@ DataSourceName = "dobi_tra:123###00@tcp(172.16.8.222:3306)/morecoin?charset=utf8
 [RedisDatabase]
 Addr = "172.16.8.216:6379"
 Password = "dobi#!1123Wqs"
+DB = 15

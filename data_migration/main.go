@@ -60,7 +60,8 @@ func init() {
 	var redis_options = &redis.Options{
 		Addr:	redisConfig.Addr,
 		Password:	redisConfig.Password,
-		DB:15}
+		DB:	redisConfig.DB,
+	}
 	redisClien = redis.NewClient(redis_options)
 
 }
