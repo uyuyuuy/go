@@ -24,7 +24,7 @@ import (
 
 func init() {
 	//获取绝对路径
-	//filePath, err := filepath.Abs("./data_migration/config/config.toml")
+	//filePath, err := filepath.Abs("./data_migration/config/config00.toml")
 	//if err != nil {
 	//	panic(err)
 	//}
@@ -49,8 +49,22 @@ func init() {
 
 
 func main() {
+	whatData := ""
+	fmt.Println("what data do you want to migration")
+	fmt.Scanln(&whatData)
 
-	main2.UserData()
+	switch whatData {
+	case "user":
+		main2.UserData()
+	case "api":
+		main2.OpenApi()
+	case "coin":
+		main2.Coin()
+	case "kline":
+		main2.Kline()
+	case "news":
+		main2.News()
+	}
 
 	//data_user()
 	os.Exit(111)

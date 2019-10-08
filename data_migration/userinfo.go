@@ -3,7 +3,7 @@ package data_migration
 import (
 	"fmt"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"github.com/pkg/errors"
+	//"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github/data_migration/mycore"
 	"strings"
@@ -34,7 +34,7 @@ func UserData() (err error) {
 		if p := recover();p != nil{
 			//异常日志
 			Logrus.Warn(reflect.ValueOf(p).String())
-			err = errors.New(reflect.ValueOf(p).String())
+			//err = errors.New(reflect.ValueOf(p).String())
 		}
 	}()
 	err = nil
@@ -96,7 +96,7 @@ func doUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	if userScan.UID == 0 {
 		panic("No data")
 	} else {
-		Logrus.Info("开始同步：", userScan.UID)
+		Logrus.Info("开始同步：", userScan)
 	}
 
 	defer func() {
@@ -165,7 +165,7 @@ func doUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	//userInfo.CountryID = userScan.Country
 
 	tm := time.Unix(userScan.Created, 0)
-	userInfo.RegisterTime = tm.Format("2019-07-29 20:00:00")
+	userInfo.RegisterTime = string(tm.Format("2006-01-02 15:04:05"))
 
 	//证件类型
 	if userScan.CardType != 0 {
@@ -204,6 +204,7 @@ func doUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 
 
 	//用户地址
+	/*
 	var userAddress []oldModel.Address
 	oldDb.Where(oldModel.Address{UID:userScan.UID}).Find(&userAddress)
 	Logrus.Warn(userAddress)
@@ -234,6 +235,8 @@ func doUserData(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	} else {
 		Logrus.Warn(userScan.UID, "无地址数据")
 	}
+	*/
+
 
 	//用户资产
 	var userAsset oldModel.Asset

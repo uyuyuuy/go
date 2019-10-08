@@ -5,16 +5,16 @@ import "database/sql"
 type UserInfo struct {
 	UserID	uint64	`gorm:"column:F01"`
 	Name  string	`gorm:"column:F02"`
-	CredentialsType string	`gorm:"column:F03"`
+	CredentialsType string	`gorm:"column:F03;DEFAULT:SFZ"`
 	ID	string	`gorm:"column:F04"`
 	CountryID	int	`gorm:"column:F05"`
 	ReferrerTag	sql.NullString	`gorm:"column:F06"`
 	MyselfTag	sql.NullString	`gorm:"column:F07"`
 	TradePassword	string	`gorm:"column:F08"`
 	RegisterTime	string	`gorm:"column:F09"`
-	LastLoginTime	string	`gorm:"column:F10"`
+	LastLoginTime	string	`gorm:"column:F10;DEFAULT:NULL"`
 	VipStatus string `gorm:"column:F13"`
-	VipTime string `gorm:"column:F14"`
+	VipTime string `gorm:"column:F14;DEFAULT:NULL"`
 
 }
 

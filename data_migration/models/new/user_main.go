@@ -8,8 +8,8 @@ type UserMain struct {
 	Password	string	`gorm:"column:F03"`
 	Mobile	sql.NullString	`gorm:"column:F04"`
 	Email	sql.NullString	`gorm:"column:F05"`
-	IsLock	string	`gorm:"column:F06"`
-	RegisterFrom	string	`gorm:"column:F07"`
+	IsLock	string	`gorm:"column:F06;DEFAULT:F"`
+	RegisterFrom	string	`gorm:"column:F07;DEFAULT:Web"`
 	LockRemark	string	`gorm:"column:F08"`
 	Secretkey	string	`gorm:"column:F09"`
 	AvatarUrl string	`gorm:"column:F10"`

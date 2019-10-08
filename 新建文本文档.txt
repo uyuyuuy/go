@@ -1,0 +1,9 @@
+go get github.com/jinzhu/gorm
+
+github.com/sirupsen/logrus
+
+github.com/BurntSushi/toml
+
+github.com/go-redis/redis
+github.com/go-sql-driver/mysql
+

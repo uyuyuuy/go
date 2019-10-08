@@ -21,7 +21,7 @@ type CoinPair struct {
 
 	IsDisplay	string	`gorm:"column:F14"`
 	IsOpen	string	`gorm:"column:F15"`
-	IsDelete	string	`gorm:"column:F16"`
+	IsDelete	string	`gorm:"column:F16;DEFAULT:F"`
 	ApiTradeMin	float64	`gorm:"column:F17"`	//api交易最小数量
 	ApiTradeMax	float64	`gorm:"column:F18"`	//api交易最大数量
 	NumberPrecision	int	`gorm:"column:F19"`	//交易市场-交易数量显示精确度（小数位数）',

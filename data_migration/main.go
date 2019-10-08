@@ -15,6 +15,7 @@ var oldDb *gorm.DB
 var newDbCore *gorm.DB
 var newDbTrade *gorm.DB
 var redisClien *redis.Client
+var redisClien5 *redis.Client
 var Logrus *logrus.Logger
 
 
@@ -24,7 +25,7 @@ func init() {
 	var config myconfig.Config
 
 	//获取绝对路径
-	filePath, err := filepath.Abs("./src/github/data_migration/config/config.toml")
+	filePath, err := filepath.Abs("./src/github/data_migration/config/config00.toml")
 	if err != nil {
 		panic(err)
 	}
@@ -63,6 +64,14 @@ func init() {
 		DB:	redisConfig.DB,
 	}
 	redisClien = redis.NewClient(redis_options)
+
+	//redisConfig := config.RedisDatabase
+	var redis_options5 = &redis.Options{
+		Addr:	redisConfig.Addr,
+		Password:	redisConfig.Password,
+		DB:	5,
+	}
+	redisClien5 = redis.NewClient(redis_options5)
 
 }
 

@@ -87,7 +87,7 @@ func doNews(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 	}()
 
 	var news oldModel.News
-	oldDb.Table("openapi").Where("id > ? ", LastID).Order("id asc").Limit(1).Scan(&news)
+	oldDb.Table("news").Where("id > ? and category IN(?)", LastID, []int{2,4,5,6}).Order("id asc").Limit(1).Scan(&news)
 
 	if news.ID > 0 {
 		LastID = news.ID
@@ -104,7 +104,7 @@ func doNews(user_lock *sync.Mutex, user_lock_group *sync.WaitGroup) {
 		newNews.Type = categorySlice[news.Category]
 
 		tm := time.Unix(news.Created, 0)
-		newNews.CreateTime = tm.Format("2019-08-09 15:00:00")
+		newNews.CreateTime = string(tm.Format("2006-01-02 15:04:05"))
 
 		if news.LanguageCode == "cn" {
 			news.LanguageCode = "zh"

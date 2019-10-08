@@ -10,6 +10,25 @@ var count1 int = 1
 
 func main() {
 
+
+	ChanSlice := make([]chan int, 10)
+
+	for i := 9; i >= 0; i-- {
+	//for i := 0; i < 10; i++ {
+		ChanSlice[i] = make(chan int)
+		go func(i int) {
+			//fmt.Println(ChanSlice)
+			//fmt.Println(i)
+			ChanSlice[i] <- i
+		}(i)
+	}
+
+	for _, c := range ChanSlice{
+		j := <- c
+		fmt.Println(j)
+	}
+
+	os.Exit(0)
 	//var ch1 chan int
 	//var ch2 map[string] chan int
 	//var ch3 chan [10]int

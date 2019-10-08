@@ -5,7 +5,7 @@ import "github.com/jinzhu/gorm"
 
 func init() {
 	//获取绝对路径
-	//filePath, err := filepath.Abs("./data_migration/config/config.toml")
+	//filePath, err := filepath.Abs("./data_migration/config/config00.toml")
 	//if err != nil {
 	//	panic(err)
 	//}

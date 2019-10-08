@@ -7,7 +7,6 @@ type News struct {
 	Receive string
 	Created	int64
 	Expired int64
-	IsNew	int64
 	Sort	int64
 	Category	int64
 	Updated	int64

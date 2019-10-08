@@ -18,10 +18,10 @@ type Coin struct {
 	Series	string	`gorm:"column:F15;DEFAULT:NULL"`		//系列
 	Description	string	`gorm:"column:F16"`
 	OutLimit	float64	`gorm:"column:F17"`
-	IsDelete	string	`gorm:"column:F18"`
+	IsDelete	string	`gorm:"column:F18;DEFAULT:F"`
 	MaxMove	float64	`gorm:"column:F19"`	//最大划转数量
 	OutFloatNumberLimit	int		`gorm:"column:F20"`	//提币小数位控制
-	IsFreeFee	string	`gorm:"column:F21"`	//是否免手续费：S-是；F-否
+	IsFreeFee	string	`gorm:"column:F21;DEFAULT:F"`	//是否免手续费：S-是；F-否
 	ChormUrl	string	`gorm:"column:F22"`	//区块链浏览器URL
 	IsHaveMemo	string	`gorm:"column:F23;DEFAULT:F"`	//充币memo：S-是；F-否
 	MinIn	float64	`gorm:"column:F24"`	//充币最小数量

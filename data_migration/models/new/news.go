@@ -9,8 +9,8 @@ type News struct {
 	From	string	`gorm:"column:F06"`
 	CreateTime	string	`gorm:"column:F07"`
 	Type	string	`gorm:"column:F08;type:enum('Notice','Activity','Project','Information','No');default:No"`
-	IsPublic	string	`gorm:"column:F09"`
-	IsDelete	string	`gorm:"column:F10"`
+	IsPublic	string	`gorm:"column:F09;default:S"`
+	IsDelete	string	`gorm:"column:F10;default:F"`
 	Lang	string	`gorm:"column:F11"`
 }
 

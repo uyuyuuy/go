@@ -56,7 +56,7 @@ func doMarket() (err error) {
 
 	sqlStr := fmt.Sprintf("INSERT INTO t6014(F02,F03,F04) VALUES %s", strings.Join(valueStrings, ","))
 	if err := newDbTrade.Exec(sqlStr,valueArgs...).Error; err != nil{
-		Logrus.Warn("交易区同步失败")
+		Logrus.Warn(err, "交易区同步失败")
 		panic(err)
 	} else {
 		Logrus.Info("交易区同步成功")
@@ -101,6 +101,7 @@ func Coin() (err error) {
 
 	for _,c := range coin {
 		var newCoin newModel.Coin
+		newCoin.CreateTime = "2019-08-22 00:00:00"
 		newCoin.Name = strings.ToUpper(c.Name)
 		newCoin.AssetName = c.AssetName
 		newCoin.MinOut = c.MinOut
@@ -127,7 +128,7 @@ func Coin() (err error) {
 		newCoin.Description = c.Describe
 
 		if e := newDbCore.Create(&newCoin).Error; e != nil {
-			Logrus.Warn(c.Name, "：失败")
+			Logrus.Warn(c.Name, "：失败", e)
 		}
 
 	}
@@ -157,9 +158,9 @@ func Coin() (err error) {
 			_ = rows.Scan(&coinID, &coinName)
 			switch coinName {
 			case strings.ToUpper(c.CoinFrom):
-				newCoinPari.BuyCoinID = coinID
-			case strings.ToUpper(c.CoinTo):
 				newCoinPari.SaleCoinID = coinID
+			case strings.ToUpper(c.CoinTo):
+				newCoinPari.BuyCoinID = coinID
 			default:
 				Logrus.Warn("CoinFrom,CoinTo对不上")
 			}
@@ -169,18 +170,25 @@ func Coin() (err error) {
 		newCoinPari.SaleRate = c.RateSale
 		newCoinPari.BuyRate = c.RateBuy
 		newCoinPari.BuyMin = c.MinTrade
+		newCoinPari.SaleMin = c.MinTrade
 		newCoinPari.BuyMax = c.MaxTrade
+		newCoinPari.SaleMax = c.MaxTrade
 		if c.Status == 0 {
+			newCoinPari.IsDisplay = "S"
 			newCoinPari.IsOpen = "S"
 		} else {
+			newCoinPari.IsDisplay = "F"
 			newCoinPari.IsOpen = "F"
 		}
 		newCoinPari.PricePrecision = c.PairPriceFloat
 		newCoinPari.NumberPrecision = c.PairNumberFloat
 		newCoinPari.Order = c.OrderBy
+		newCoinPari.CreateTime = "2019-08-22 00:00:00"
 
+		if e := newDbTrade.Create(&newCoinPari).Error; e != nil {
+			Logrus.Warn("交易对失败", e)
+		}
 
-		newDbTrade.Create(&newCoinPari)
 	}
 	return 
 }
